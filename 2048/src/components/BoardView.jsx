@@ -4,6 +4,7 @@ import Tile from "./Tile";
 import Cell from "./Cell";
 import { Board } from "../helper/index";
 import useEvent from "../helper/hooks/useEvents";
+import GameOverlay from "./GameOverlay";
 
 const BoardView = () => {
   const [board, setBoard] = useState(new Board());
@@ -56,9 +57,9 @@ const BoardView = () => {
         </div>
       </div>
       <div className="board">
-        {" "}
         {cells}
         {tiles}
+        <GameOverlay onRestart={resetGame} board={board} />
       </div>
     </div>
   );
