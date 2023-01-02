@@ -9,7 +9,7 @@ const Tile = ({ tile }) => {
   if (tile.isNew()) classArray.push("new");
   if (tile.hasMoved()) {
     classArray.push(`row_from_${tile.fromRow()}_to_${tile.toRow()}`);
-    classArray.push(`row_from_${tile.fromColumn()}_to_${tile.toColumn()}`);
+    classArray.push(`column_from_${tile.fromColumn()}_to_${tile.toColumn()}`);
     classArray.push("isMoving");
   }
   let classes = classArray.join(" ");
