@@ -61,6 +61,9 @@ const BoardView = () => {
         {tiles}
         <GameOverlay onRestart={resetGame} board={board} />
       </div>
+      <div>
+        <p className="copy">&copy; Agostinho Soberano 2022</p>
+      </div>
     </div>
   );
 };
